@@ -28,6 +28,14 @@ module.exports = env => ({
         exclude: /node_modules/,
         use: ["babel-loader", "eslint-loader"],
       },
+      {
+        test: /\.css$/,
+        // exclude: /(node_modules)/, // Remove this 
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+        ],
+      },
       // scss.rule,
       /*
       {
