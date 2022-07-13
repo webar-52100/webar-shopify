@@ -1,7 +1,7 @@
 import React from "react";
 
-function TextBanner() {
-  return <div>Hi, I am a Banner!</div>;
+function TextBanner({ props }) {
+  return <div>{props.text}</div>;
 }
 
 export default TextBanner;

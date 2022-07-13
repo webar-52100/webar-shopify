@@ -35,8 +35,13 @@
   <!--
     React container
   -->
-  <div id="js-webar-r-pdp-hero-component"></div>
-  <div id="js-webar-r-pdp-countdown-component"></div>
+  <div id="js-webar-r-pdp-hero-component" data-text="This is a banner!"></div>
+  
+  <div id="js-webar-r-pdp-countdown-component" 
+    data-title="Titolone" 
+    data-subtitle="Sottotitolo!" 
+    data-expire="2022-07-23">
+  </div>
 
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.gallery_layout }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">

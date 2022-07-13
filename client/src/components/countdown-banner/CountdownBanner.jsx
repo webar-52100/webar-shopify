@@ -7,9 +7,10 @@ import { useState, useEffect } from 'react';
  * @param {date} format yyyy-mm-gg 
  * @returns rendered comppnent
  */
-function CountdownBanner({date, title, subtitle}) {
+function CountdownBanner({ props }) {
+  
   const calculateTimeLeft = () => {
-    const difference = +new Date(date) - +new Date();
+    const difference = +new Date(props.expire) - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -52,8 +53,8 @@ function CountdownBanner({date, title, subtitle}) {
   });
   return (
     <div className='CountdownBanner'>
-      <h1>{title}</h1>
-      <h2>{subtitle}</h2>
+      <h1>{props.title}</h1>
+      <h2>{props.subtitle}</h2>
       <div className='CountdownBanner-timer'>
         {timerComponents.length ? timerComponents : <span>Time's up!</span>}
       </div>
